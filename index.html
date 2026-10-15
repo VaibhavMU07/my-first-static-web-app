@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Network Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Azure Network Explorer</h1>
+        <p>Virtual Network and Subnet Inventory Lab</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <article class="card">
+                <h3>Virtual Networks</h3>
+                <p id="vnetCount">0</p>
+            </article>
+            <article class="card">
+                <h3>Subnets</h3>
+                <p id="subnetCount">0</p>
+            </article>
+            <article class="card">
+                <h3>Delegated Subnets</h3>
+                <p id="delegatedCount">0</p>
+            </article>
+        </section>
+
+        <section class="inventory">
+            <h2>Subnet Inventory</h2>
+            <input id="search" type="search"
+                   placeholder="Search resource group, VNet, subnet...">
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource Group</th>
+                            <th>VNet Name</th>
+                            <th>Subnet Name</th>
+                            <th>Subnet ID</th>
+                            <th>Delegation</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subnetTable"></tbody>
+                </table>
+            </div>
+            <p id="resultCount"></p>
+        </section>
+
+        <footer>
+            Static Web Apps Lab | Sample data only | Read-only demo
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
